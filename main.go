@@ -27,7 +27,7 @@ func main() {
 
 	fmt.Printf("We have found %d articles\n", len(articles))
 
-	for i, v := range articles {
-		fmt.Printf("Article %d: %s\n", (i + 1), v)
+	for i, article := range articles {
+		fmt.Printf("Article %d: %s\n", (i + 1), article)
 	}
 }
