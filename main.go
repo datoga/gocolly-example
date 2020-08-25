@@ -11,12 +11,9 @@ func main() {
 
 	articles := []string{}
 
-	// Find and visit all links
+	// Find articles
 	c.OnHTML("article > h2 > a", func(e *colly.HTMLElement) {
-
-		article := e.Text
-
-		articles = append(articles, article)
+		articles = append(articles, e.Text)
 	})
 
 	c.OnRequest(func(r *colly.Request) {
